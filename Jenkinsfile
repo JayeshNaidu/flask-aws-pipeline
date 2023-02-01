@@ -26,13 +26,7 @@ pipeline{
                 //changing dir
                 sh "pwd"
                 sh "ls"
-                dir('flask-aws-pipeline') {
-                    sh "pwd"
-                    sh "ls -a"
-                    //building the docker image
-                    sh "sudo docker build -t $name ."
-                    
-                }
+                sh "sudo docker build -t $name ."
                 
             }
             post{
