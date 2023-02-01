@@ -7,7 +7,7 @@ pipeline{
         stage("pulling code"){
             steps{
                 //we are pulling the code from github
-               git url: 'https://github.com/jfrogdev/project-examples.git'
+               git url: 'https://github.com/JayeshNaidu/flask-aws-pipeline.git' , branch: 'main'
             }
             post{
                 always{
@@ -23,8 +23,17 @@ pipeline{
         }
         stage("building image"){
             steps{
-                //building the docker image
-                sh "sudo docker build -t $name ."
+                //changing dir
+                sh "pwd"
+                sh "ls"
+                dir('flask-aws-pipeline') {
+                    sh "pwd"
+                    sh "ls -a"
+                    //building the docker image
+                    sh "sudo docker build -t $name ."
+                    
+                }
+                
             }
             post{
                 always{
