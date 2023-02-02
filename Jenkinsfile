@@ -79,7 +79,7 @@ pipeline{
                     echo "Authenticated to ECR repo"
                 }
                 failure{
-                    echo "Auth failed"
+                    echo "Authentication failed"
                 }
             }
         }
