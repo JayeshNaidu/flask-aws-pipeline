@@ -110,7 +110,7 @@ pipeline{
             echo "all stages completed"
         }
         success{
-            echo "all stages completed successfully"
+            echo "all stages completed successfully "
         }
         failure{
             echo "some or all stages failed "
