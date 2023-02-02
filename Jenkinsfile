@@ -2,7 +2,7 @@ env.name = 'xcel2json'
 env.AWS_ACCOUNT_ID = '342488151234'
 env.AWS_DEFAULT_REGION= 'us-east-1'
 env.IMAGE_TAG= 'latest'
-env.IMAGE_REPO_NAME= 'flask-aws-build'
+env.IMAGE_REPO_NAME= 'xcel2json'
 env.FINAL_REPO_URI= ''
 pipeline{
     agent{
@@ -97,7 +97,7 @@ pipeline{
                     echo "stage 5 completed"
                 }
                 success{
-                    echo "Successfully pushed image to ECR repo"
+                    echo "Successfully tagged and pushed image to ECR repo"
                 }
                 failure{
                     echo "push failed"
