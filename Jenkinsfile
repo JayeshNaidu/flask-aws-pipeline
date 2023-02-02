@@ -57,7 +57,7 @@ pipeline{
                     echo "complete stage 3"
                 }
                 success{
-                    echo "container running"
+                    echo "container running "
                 }
                 failure{
                     echo "run failed"
